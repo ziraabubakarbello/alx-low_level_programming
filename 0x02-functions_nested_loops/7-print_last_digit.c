@@ -2,15 +2,15 @@
 
 /**
  * print_last_digit - prints the last digits of a number
- * @n: the parameter passed
+ * @r: the parameter passed
  * Return: return the last digit
 */
 
-int print_last_digit(int n)
+int print_last_digit(int r)
 {
-	int n;
+	int r;
 
-	int result = n % 10;
+	int result = r % 10;
 
 	return (result);
 }
