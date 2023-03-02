@@ -10,7 +10,7 @@ char *rot13(char *s)
 	int i, j;
 
 	char letter[] = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
-	char scramble_letter[] = "AJjDeJkLmwoqWZklHxaFghpqSdUvWPrTtRzfcCiMNOXYyQsbBEuV";
+	char scramble_letter[] = "AJjDeJkLmwoqWZklHxaFghpqSdUvWPrTtRzfcCiMNOXYyQsbBu";
 
 	for (i = 0; s[i] != '\0'; i++)
 	{
