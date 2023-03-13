@@ -3,7 +3,7 @@
 #include <stdlib.h>
 
 /**
- * str_conca- concatenate two strings
+ * str_concat- concatenate two strings
  * @s1: first parameter
  * @s2:second parameter
  * Return: a pointer
@@ -28,7 +28,7 @@ char *str_concat(char *s1, char *s2)
 	{
 		b++;
 	}
-	conc = malloc(sizeof(char) *(a + b + 1));
+	conc = malloc(sizeof(char) * (a + b + 1));
 
 	if (conc == NULL)
 	{
@@ -50,6 +50,3 @@ char *str_concat(char *s1, char *s2)
 	conc[a] = '\0';
 	return (conc);
 }
-
-
-
