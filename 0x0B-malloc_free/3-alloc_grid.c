@@ -11,41 +11,39 @@
 
 int **alloc_grid(int width, int height)
 {
-	int **tda, a, b;
+	int **mee;
+	int x, y;
 
 	if (width <= 0 || height <= 0)
 	{
 		return (NULL);
 	}
+	mee = malloc(sizeof(int *) * height);
 
-	tda = (sizeof(int*) * height);
-
-	if (tda == NULL)
+	if (mee == NULL)
 	{
 		return (NULL);
 	}
-	for (a = 0; a < height; a++)
+	for (x = 0; x < height; x++)
 	{
-		tda[a] = malloc(sizeof(int) * width);
+		mee[x] = malloc(sizeof(int) * width);
 
-		if (tda[a] == NULL)
+		if (mee[x] == NULL)
 		{
-			for (; a >= 0; a--)
+			for (; x >= 0; x--)
 			{
-				free(tda[a]);
+				free(mee[x]);
 			}
-			free(tda);
+			free(mee);
 			return (NULL);
 		}
 	}
-	for (a = 0; a < height; a++)
+	for (x = 0; x < height; x++)
 	{
-		for (b = 0; b < width; b++)
+		for (y = 0; y < width; y++)
 		{
-			tda[a][b] = 0;
+			mee[x][y] = 0;
 		}
 	}
-	return (tda);
+	return (mee);
 }
-	
-
